@@ -21,7 +21,7 @@ def quantum_model_train(train_X, train_Y, depth=0):
 
     train_data = list(zip(train_X, train_Y))
 
-    dev = qml.device("default.qubit.autograd", wires=9)
+    dev = qml.device("default.qubit.autograd", wires=1)
 
     def variational_circ(i, w):
         qml.RZ(w[i][0], wires=0)
